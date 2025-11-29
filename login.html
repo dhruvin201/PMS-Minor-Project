@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Portfolio Management System</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="error-message" style="color: red; text-align: center; margin-bottom: 15px; display: none;"></div>
+        <form action="php/login.php" method="POST" class="form" id="loginForm">
+            <h2>Login</h2>
+            <div class="inputGroup">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="inputGroup">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <button type="submit" class="btnPrimary">Login</button>
+            <p class="message">Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+    </div>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

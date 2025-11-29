@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --blue: #216bc4;
+  --blue-light: #f4f8fb;
+  --blue-dark: #174a7c;
+  --blue-accent: #1976d2;
+  --gray-bg: #f6f8fa;
+  --gray: #bfcbe2;
+}
+
+body {
+  background-color: var(--gray-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--blue-dark);
+  min-height: 100vh;
+}
+
+/* Main layout */
+.main-content {
+  padding: 35px 45px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Header */
+.main-content h2 {
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-desc {
+  color: #5f6f86;
+  font-size: 0.95rem;
+  max-width: 800px;
+}
+
+/* Summary cards (reuse dashboard look) */
+.summary-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(49, 116, 204, 0.08);
+  padding: 1.4rem 1.7rem;
+  color: var(--blue-dark);
+  min-width: 220px;
+  flex: 1 1 220px;
+  transition: box-shadow 0.3s ease;
+}
+
+.summary-card h5 {
+  color: var(--blue-accent);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.summary-card p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary-card small {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: #7b879a;
+}
+
+.summary-card:hover {
+  box-shadow: 0 10px 28px rgba(49, 116, 204, 0.18);
+}
+
+/* Holdings table */
+.table-responsive {
+  box-shadow: 0 6px 18px rgba(49, 116, 204, 0.11);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+table.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--blue-dark);
+}
+
+table.portfolio-table thead tr {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+table.portfolio-table th,
+table.portfolio-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+table.portfolio-table th:first-child,
+table.portfolio-table td:first-child {
+  text-align: left;
+}
+
+table.portfolio-table tbody tr:nth-child(even) {
+  background-color: #f7f9ff;
+}
+
+table.portfolio-table tbody tr:hover {
+  background-color: var(--blue-light);
+}
+
+table.portfolio-table thead tr th:first-child {
+  border-top-left-radius: 16px;
+}
+table.portfolio-table thead tr th:last-child {
+  border-top-right-radius: 16px;
+}
+
+/* P/L colors (reuse) */
+.text-success-thick {
+  color: #127a17;
+  font-weight: 600;
+}
+
+.text-danger-thick {
+  color: #a83232;
+  font-weight: 600;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  color: var(--blue) !important;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .main-content {
+    padding: 25px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  table.portfolio-table th,
+  table.portfolio-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  .summary-card {
+    flex: 1 1 100%;
+  }
+}
+
+.sort-arrows {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.sort-arrows a {
+  color: inherit;
+  margin: 0;
+  font-size: 0.8em;
+  line-height: 1;
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.sort-arrows a:hover {
+  color: var(--blue-accent);
+}
+
+.action-btn-group .btn-action,
+.btn-action {
+  width: 160px;
+  text-align: center;
+}
+
+/* Update available: green/teal */
+.btn-update-available {
+  background: #17a673;
+  border-color: #17a673;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-update-available:hover {
+  background: #13865c;
+  border-color: #13865c;
+  color: #fff;
+}
+
+/* Update disabled: grey */
+.btn-update-disabled {
+  background: #c4c9d2;
+  border-color: #c4c9d2;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+.btn-update-disabled:hover {
+  background: #c4c9d2;
+  border-color: #c4c9d2;
+  color: #ffffff;
+}
+
+.btn-update-pf {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.6rem 2.2rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 8px 18px rgba(23, 166, 115, 0.35);
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+}
+
+/* available: green pill */
+.btn-update-available {
+  background: linear-gradient(90deg, #17a673, #0f9963);
+  color: #fff;
+}
+.btn-update-available:hover {
+  background: linear-gradient(90deg, #0f9963, #17a673);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* disabled: grey pill */
+.btn-update-disabled {
+  background: #c4c9d2;
+  color: #ffffff;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.btn-update-disabled:hover {
+  background: #c4c9d2;
+  color: #ffffff;
+  transform: none;
+}

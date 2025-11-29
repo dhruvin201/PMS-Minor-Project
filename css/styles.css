@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Zerodha blue color theme */
+:root {
+  --blue-primary: #1976d2;
+  --blue-light: #e3f2fd;
+  --blue-dark: #174ea6;
+  --gray-light: #f4f8fb;
+  --gray-border: #e0e5ea;
+  --gray-text: #4e5b6b;
+}
+
+body {
+  background: var(--gray-light);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-text);
+}
+
+.container {
+  background: #fff;
+  padding: 45px 55px;
+  border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(25, 118, 210, 0.08);
+  width: 380px;
+  max-width: 95vw;
+}
+
+form.form h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--blue-primary);
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.form .subtitle {
+  font-size: 14px;
+  color: var(--blue-dark);
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.inputGroup input {
+  width: 90%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1.5px solid var(--gray-border);
+  background: var(--blue-light);
+  font-size: 16px;
+  color: var(--gray-text);
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.inputGroup input::placeholder {
+  color: var(--blue-primary);
+}
+
+.inputGroup input:focus {
+  border-color: var(--blue-primary);
+  background-color: #bbdefb;
+}
+
+.btnPrimary {
+  width: 100%;
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue-primary));
+  border: none;
+  padding: 16px 0;
+  font-size: 17px;
+  border-radius: 35px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 22px rgba(25, 118, 210, 0.16);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(90deg, var(--blue-primary), var(--blue-dark));
+  box-shadow: 0 9px 28px rgba(25, 118, 210, 0.2);
+}
+
+.message {
+  font-size: 14px;
+  text-align: center;
+  color: var(--gray-text);
+  margin-top: 24px;
+}
+
+.message a {
+  color: var(--blue-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.message a:hover {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}

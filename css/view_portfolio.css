@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --blue: #216bc4;
+  --blue-light: #f4f8fb;
+  --blue-dark: #174a7c;
+  --blue-accent: #1976d2;
+  --gray-bg: #f6f8fa;
+  --gray: #bfcbe2;
+}
+
+body {
+  background-color: var(--gray-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--blue-dark);
+  min-height: 100vh;
+}
+
+main.main-content {
+  margin-left: 0;
+  padding: 40px 50px;
+  background: #fff;
+  min-height: 100vh;
+  color: var(--blue-dark);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dashboard-header h1 {
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.welcome-msg {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--blue-accent);
+  margin-bottom: 40px;
+}
+
+.pastel-text {
+  color: var(--blue);
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(49, 116, 204, 0.08);
+  padding: 1.75rem;
+  color: var(--blue-dark);
+  transition: box-shadow 0.3s ease;
+}
+
+.summary-card h5 {
+  color: var(--blue-accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--blue-dark);
+}
+
+.summary-card:hover {
+  box-shadow: 0 10px 28px rgba(49, 116, 204, 0.18);
+}
+
+.btn-custom {
+  background: linear-gradient(90deg, var(--blue), var(--blue-accent));
+  color: #fff;
+  font-weight: 700;
+  border-radius: 35px;
+  padding: 0.75rem 2.5rem;
+  box-shadow: 0 6px 20px rgba(49, 116, 204, 0.12);
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(90deg, var(--blue-accent), var(--blue));
+  box-shadow: 0 9px 28px rgba(49, 116, 204, 0.22);
+}
+
+/* Portfolio table styles */
+table.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: var(--blue-dark);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(49, 116, 204, 0.11);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+table.portfolio-table thead tr {
+  background: var(--blue);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+table.portfolio-table th,
+table.portfolio-table td {
+  padding: 16px 18px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+table.portfolio-table tbody tr:hover {
+  background-color: var(--blue-light);
+}
+
+table.portfolio-table thead tr th:first-child {
+  border-top-left-radius: 16px;
+}
+table.portfolio-table thead tr th:last-child {
+  border-top-right-radius: 16px;
+}
+
+/* Sorting Arrows - vertical, compact */
+.sort-arrows a {
+  color: inherit;
+  margin: 0;
+  font-size: 0.82em;
+  line-height: 1;
+  display: block;
+  padding: 0;
+  transition: color 0.15s;
+}
+.sort-arrows a:hover {
+  color: var(--blue-accent);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  table.portfolio-table th, table.portfolio-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  main.main-content {
+    padding: 25px 20px;
+  }
+  .welcome-msg {
+    margin-top: 8px;
+  }
+  .btn-custom {
+    width: 100%;
+  }
+}
+
+.text-success-thick {
+  color: #127a17;  /* dark, visible green */
+}
+
+.text-danger-thick {
+  color: #a83232;  /* rich dark red */
+}
+
+table.portfolio-table td,
+table.portfolio-table th {
+  font-weight: 600; /* semi-bold font weight for all cells */
+}
+
+.action-btn-group .btn-action {
+  width: 160px;
+  text-align: center;
+}
+.action-btn-group form { margin: 0; }
+
+.action-btn-group .btn-action {
+  width: 160px;
+  text-align: center;
+}
+
+/* Update available: teal/green accent */
+.btn-update-available {
+  background: #17a673;
+  border-color: #17a673;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-update-available:hover {
+  background: #13865c;
+  border-color: #13865c;
+  color: #fff;
+}
+
+/* Update disabled: greyed out */
+.btn-update-disabled {
+  background: #c4c9d2;
+  border-color: #c4c9d2;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+.btn-update-disabled:hover {
+  background: #c4c9d2;
+  border-color: #c4c9d2;
+  color: #ffffff;
+}

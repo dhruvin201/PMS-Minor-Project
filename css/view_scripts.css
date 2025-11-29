@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --blue: #216bc4;
+  --blue-light: #f4f8fb;
+  --blue-dark: #174a7c;
+  --gray-bg: #f6f8fa;
+  --gray: #bfcbe2;
+}
+
+body {
+  background-color: var(--gray-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--blue-dark);
+  min-height: 100vh;
+}
+
+.scripts-table {
+  width: 65%;
+  min-width: 300px;
+  margin: 50px auto 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(49, 116, 204, 0.11);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.scripts-table thead tr {
+  background: var(--blue);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.scripts-table th,
+.scripts-table td {
+  padding: 18px 22px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+  font-weight: 600;
+}
+
+.scripts-table tbody tr:hover {
+  background-color: var(--blue-light);
+}
+
+.scripts-table thead tr th:first-child {
+  border-top-left-radius: 16px;
+}
+.scripts-table thead tr th:last-child {
+  border-top-right-radius: 16px;
+}
+
+@media (max-width: 900px) {
+  .scripts-table {
+    width: 95%;
+  }
+  .scripts-table th, .scripts-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Stock selection section */
+.stock-selection-card {
+background: #ffffff;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(33, 107, 196, 0.18);
+padding: 2.2rem 2rem;
+margin: 2.5rem auto 1.5rem auto;
+max-width: 780px;
+border: 1px solid #e3ecfa;
+}
+
+.stock-selection-card h4 {
+color: #174ea6;
+font-size: 1.45rem;
+font-weight: 700;
+margin-bottom: 1.2rem;
+}
+
+.stock-selection-card .section-subtitle {
+font-size: 0.95rem;
+color: #5f6f86;
+margin-bottom: 0.6rem;
+}
+
+.info-badge {
+background: linear-gradient(90deg, #e7f1ff, #f3f7ff);
+color: #174ea6;
+padding: 0.55rem 1rem;
+border-radius: 999px;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+margin-bottom: 1rem;
+font-size: 0.95rem;
+}
+
+.info-badge span.label {
+opacity: 0.8;
+}
+
+.info-badge span.value {
+font-weight: 700;
+}
+
+/* Input styling */
+.num-stocks-input {
+border-radius: 999px;
+padding: 0.75rem 1.3rem;
+border: 1px solid #c7d5f0;
+font-size: 1rem;
+color: #174ea6;
+}
+
+.num-stocks-input::placeholder {
+color: #9aa6bf;
+font-weight: 500;
+}
+
+.form-label.fw-bold {
+font-size: 0.98rem;
+color: #174a7c;
+margin-bottom: 0.4rem;
+}
+
+.help-text {
+font-size: 0.85rem;
+color: #6b7a91;
+margin-top: 0.3rem;
+}
+
+.help-text strong {
+color: #174ea6;
+}
+
+/* Proceed button */
+.btn-proceed {
+background: linear-gradient(90deg, #216bc4, #1976d2);
+color: #fff;
+font-weight: 700;
+border-radius: 999px;
+padding: 0.8rem 2.8rem;
+border: none;
+box-shadow: 0 10px 24px rgba(33, 107, 196, 0.25);
+transition: all 0.25s ease;
+letter-spacing: 0.03em;
+}
+
+.btn-proceed:hover {
+background: linear-gradient(90deg, #1976d2, #216bc4);
+box-shadow: 0 14px 32px rgba(25, 118, 210, 0.32);
+transform: translateY(-1px);
+}
+
+.btn-proceed:active {
+transform: translateY(0);
+box-shadow: 0 8px 20px rgba(25, 118, 210, 0.25);  
+}
+
+/* Layout tweaks */
+.stock-selection-card .mb-3 {
+margin-bottom: 1.2rem !important; 
+}
+
+.stock-selection-card form {
+margin-top: 0.4rem; 
+}
+
+/* Heading above table */
+.index-stock-heading {
+  color: #174ea6;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stock-selection-card {
+  padding: 1.6rem 1.2rem;
+  margin-top: 1.5rem;
+  }
+  .stock-selection-card h4 {
+  font-size: 1.25rem;
+  }
+  .info-badge {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  }
+}
+
+/* Layout container */
+.index-layout {
+  max-width: 1300px;
+}
+
+/* Wrap card so sticky works but card is vertically centered in left panel */
+.stock-selection-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.sticky-selection {
+  position: sticky;
+  top: 70px; /* below navbar */
+  margin: 0 auto;
+}
+
+/* Vertically center card in left column on larger screens */
+@media (min-width: 992px) {
+  .stock-selection-wrapper {
+    display: flex;
+    align-items: flex-start; /* instead of center */
+  }
+}
+
+/* Card appearance tweaks */
+.stock-selection-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(33, 107, 196, 0.18);
+  padding: 2rem 2rem 2.2rem 2rem;
+  border: 1px solid #e3ecfa;
+  max-width: 380px;
+}
+
+/* Make right table area wider and more readable */
+.wide-table {
+  width: 100%;
+}
+
+.wide-table .scripts-table {
+  width: 100%;
+  min-width: 0; /* let it expand with column */
+}
+
+/* Ensure input looks clean */
+.num-stocks-input {
+  border-radius: 999px;
+  padding: 0.75rem 1.3rem;
+  border: 1px solid #c7d5f0;
+  font-size: 1rem;
+  color: #174ea6;
+}
+
+.num-stocks-input::placeholder {
+  color: #9aa6bf;
+  font-weight: 500;
+}
+
+/* Headings */
+.index-stock-heading {
+  color: #174ea6;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive stack on smaller screens */
+@media (max-width: 991px) {
+  .sticky-selection {
+    position: static;
+  }
+  .stock-selection-card {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}

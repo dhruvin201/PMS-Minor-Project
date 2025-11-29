@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  background-color: #f4f7fb; /* blue-tinted pastel background */
+  font-family: 'Montserrat', sans-serif;
+  color: #174ea6; /* deep blue for text */
+  min-height: 100vh;
+}
+/* Zerodha blue color theme */
+:root {
+  --blue-primary: #1976d2;
+  --blue-light: #e3f2fd;
+  --blue-dark: #174ea6;
+  --gray-light: #f4f8fb;
+  --gray-border: #e0e5ea;
+  --gray-text: #4e5b6b;
+  --box-shadow: 0 16px 48px rgba(25, 118, 210, 0.11);
+}
+
+/* Container styling */
+.container {
+  background: #fff;
+  padding: 55px 40px 48px 40px;
+  border-radius: 22px;
+  box-shadow: var(--box-shadow);
+  max-width: 560px;
+  margin: 56px auto;
+  min-height: 430px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Title styling */
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--blue-primary);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Form label & subtitle */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gray-text);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.label-desc {
+  font-size: 14px;
+  color: var(--blue-dark);
+  font-weight: 400;
+  margin-bottom: 18px;
+  margin-left: 2px;
+  display: block;
+}
+
+/* Input styling */
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1.7px solid var(--gray-border);
+  background: var(--blue-light);
+  font-size: 18px;
+  color: var(--gray-text);
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin-bottom: 24px;
+}
+
+.inputGroup input::placeholder {
+  color: var(--blue-primary);
+  font-size: 16px;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  border-color: var(--blue-primary);
+  background-color: #bbdefb;
+}
+
+/* Button styling */
+.btnPrimary {
+  width: 100%;
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue-primary));
+  border: none;
+  padding: 18px 0;
+  font-size: 19px;
+  border-radius: 40px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 8px 28px rgba(25, 118, 210, 0.18);
+  transition: background 0.3s, box-shadow 0.3s;
+  margin-top: 14px;
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(90deg, var(--blue-primary), var(--blue-dark));
+  box-shadow: 0 12px 36px rgba(25,118,210,0.21);
+}
+
+@media (max-width: 650px) {
+  .container {
+    max-width: 98vw;
+    padding: 30px 10px;
+  }
+}
+

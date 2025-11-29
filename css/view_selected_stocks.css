@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --blue: #216bc4;
+  --blue-light: #f4f8fb;
+  --blue-dark: #174a7c;
+  --gray-bg: #f6f8fa;
+  --gray: #bfcbe2;
+}
+
+/* Base */
+body {
+  background-color: var(--gray-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--blue-dark);
+  min-height: 100vh;
+}
+
+/* Container */
+main.container {
+  max-width: 1200px;
+}
+
+/* Heading */
+main h3 {
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Summary card */
+.portfolio-summary {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(33, 107, 196, 0.12);
+  border: 1px solid #e1e9fb;
+  margin: 1.5rem auto 1.5rem auto;
+  max-width: 900px;
+  color: var(--blue-dark);
+  font-size: 0.95rem;
+}
+
+.portfolio-summary div {
+  margin-bottom: 0.25rem;
+}
+
+.portfolio-summary span.label {
+  font-weight: 600;
+}
+
+.portfolio-summary span.value {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+/* Table styling (same visual as view_scripts) */
+.scripts-table {
+  width: 65%;
+  min-width: 1150px;
+  margin: 30px auto 40px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(49, 116, 204, 0.11);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+
+.scripts-table thead tr {
+  background: var(--blue);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.scripts-table th,
+.scripts-table td {
+  padding: 18px 22px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+  font-weight: 600;
+}
+
+.scripts-table tbody tr:hover {
+  background-color: var(--blue-light);
+}
+
+.scripts-table thead tr th:first-child {
+  border-top-left-radius: 16px;
+}
+.scripts-table thead tr th:last-child {
+  border-top-right-radius: 16px;
+}
+
+/* Alignment for portfolio columns */
+.scripts-table th:first-child,
+.scripts-table td:first-child {
+  text-align: left;
+}
+
+.scripts-table td:nth-child(2),
+.scripts-table td:nth-child(3),
+.scripts-table td:nth-child(4),
+.scripts-table td:nth-child(5) {
+  text-align: center;
+}
+
+.scripts-table td:last-child {
+  font-size: 0.9rem;
+  color: #5c6f92;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .scripts-table {
+    width: 95%;
+  }
+  .scripts-table th,
+  .scripts-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  .portfolio-summary {
+    margin-inline: 0.5rem;
+  }
+}
+
+/* Optional: navbar tweak for consistency */
+.navbar-brand {
+  color: var(--blue) !important;
+  font-weight: 700;
+}
+
+/* Summary cards row */
+/* Summary cards row */
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem auto 1.5rem auto;
+  justify-content: center;         /* center the row */
+}
+
+/* Individual card */
+.summary-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.1rem 1.6rem;
+  min-width: 200px;
+  box-shadow: 0 10px 30px rgba(33, 107, 196, 0.15);
+  border: 1px solid #e3ecfa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center horizontally */
+  text-align: center;    /* center text */
+}
+
+.summary-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #174ea6;
+  margin-bottom: 0.35rem;
+}
+
+.summary-value {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+/* Single color for all values */
+.summary-value.primary {
+  color: #174ea6;
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .portfolio-cards {
+    justify-content: center;
+  }
+  .summary-card {
+    min-width: 46%;
+  }
+}
+
+@media (max-width: 520px) {
+  .summary-card {
+    min-width: 100%;
+  }
+}
+
+
+/* Sorting arrows (vertical, compact) */
+.sort-arrows {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.sort-arrows a {
+  color: inherit;
+  margin: 0;
+  font-size: 0.82em;
+  line-height: 1;
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.sort-arrows a:hover {
+  color: var(--blue-accent);
+}
+
+.btn-proceed {
+  background: linear-gradient(90deg, #216bc4, #1976d2);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.8rem 2.8rem;
+  border: none;
+  box-shadow: 0 10px 24px rgba(33, 107, 196, 0.25);
+  transition: all 0.25s ease;
+  letter-spacing: 0.03em;
+}
+.btn-proceed:hover {
+  background: linear-gradient(90deg, #1976d2, #216bc4);
+  box-shadow: 0 14px 32px rgba(25, 118, 210, 0.32);
+  transform: translateY(-1px);
+}
+.btn-proceed:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.25);
+}

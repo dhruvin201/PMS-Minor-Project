@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  background-color: #f4f7fb; /* blue-tinted pastel background */
+  font-family: 'Montserrat', sans-serif;
+  color: #174ea6; /* deep blue for text */
+  min-height: 100vh;
+}
+
+.pastel-text {
+  color: #216bc4; /* primary blue accent */
+}
+
+.welcome-text {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(33, 107, 196, 0.13); /* blue shadow */
+  padding: 1.75rem;
+  color: #174ea6;
+  transition: box-shadow 0.3s ease;
+}
+
+.summary-card h5 {
+  color: #1976d2;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #174ea6;
+}
+
+.summary-card:hover {
+  box-shadow: 0 10px 28px rgba(33, 107, 196, 0.19);
+}
+
+.btn-custom {
+  background: linear-gradient(90deg, #216bc4, #1976d2);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 35px;
+  padding: 0.75rem 2.5rem;
+  box-shadow: 0 6px 20px rgba(33, 107, 196, 0.20);
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(90deg, #1976d2, #216bc4);
+  box-shadow: 0 9px 28px rgba(25, 118, 210, 0.26);
+}
+
+/* Responsive spacing fixes */
+@media (max-width: 576px) {
+  .welcome-text {
+    margin-top: 8px;
+  }
+  .btn-custom {
+    width: 100%;
+  }
+}
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 22px rgba(33, 107, 196, 0.11);
+  min-width: 160px;
+  max-width: 220px;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-card h5 {
+  color: #2273cb;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.summary-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.text-success-thick {
+  color: #169116 !important;
+  font-weight: 700;
+}
+.text-danger-thick {
+  color: #c43838 !important;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .summary-row { flex-direction: column; gap: 1.4rem;}
+}
+
